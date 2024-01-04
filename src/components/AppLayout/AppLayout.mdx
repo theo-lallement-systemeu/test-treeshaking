@@ -1,0 +1,86 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs';
+import * as AppLayoutStories from './AppLayout.stories';
+import { ComponentStatus, Message } from '../../../.storybook/components';
+
+<Meta of={AppLayoutStories} />
+
+<h1>AppLayout <ComponentStatus type="stable"/></h1>
+
+<Message>
+  Composant en lien : [`Menu`](/docs/navigation-menu--docs)
+</Message>
+
+IrisAppLayout est un composant prévu pour ajouter la TopBar et une SideBar contenant le menu.<br/>
+Le composant est réactif et offre des variations de menu automatiques ou customisables.
+
+<Canvas of={AppLayoutStories.Basic}/>
+<Controls />
+
+<Message title="Avec Vue Router">
+  Voir composant [`Menu` - Avec Vue Router](?path=/docs/navigation-menu--docs#avec-vue-router).
+</Message>
+
+## Variations de la SideBar
+
+Le menu peut avoir 3 modes selon les tailles d'écran, par défaut :
+
+<table>
+<tbody>
+  <tr>
+    <td>__Full Height__</td>
+    <td>`screenWidth < 600px`</td>
+    <td>Menu totalement caché</td>
+  </tr>
+  <tr>
+    <td>__Collapse__</td>
+    <td>`600px < screenWidth < 1200px`</td>
+    <td>Menu collapsed</td>
+  </tr>
+  <tr>
+    <td>__Default__</td>
+    <td>`1200px < screenWidth`</td>
+    <td>Menu déplié</td>
+  </tr>
+</tbody>
+</table>
+
+### Paramétrage des breakpoints de la SideBar
+
+Les variations de la sibebar peut être paramétré avec les props `fullheightEnd`et `collapseEnd` en foncion de différents breakpoints.<br/>
+Les valeurs de breakpoints possibles sont : `'always' | 'sm' | 'md' | 'lg' | 'xl' | 'never'`
+.
+<div style={{display: 'flex', gap: '1.5rem', padding: '1.5rem 0'}}>
+<img style={{width: '60%', border: '1px solid lightgray', objectFit: 'contain'}} src="images/AppLayout.png"/>
+<p style={{width: '40%', textAlign: 'justify', align: 'center'}}>
+Valeurs par défaut des props :
+- `fullheightEnd="md"`
+- `collapseEnd="lg"`
+
+Ce qui veut dire que le mode fullHeight va finir au breakpoint md et que le mode collapse va finir au breakpoint lg.
+
+Les props **peuvent prendre** n'importe quel breakpoint classique du DesignSystem + deux valeurs spéciales :
+- `never` = _jamais de fin_ (le mode sera prendra le pas sur tous les suivants)
+-  `always` =  _toujours fini_ (le mode n'apparaitra pas)
+</p>
+</div>
+
+### Exemples
+
+#### Pas de mode déplié
+Je veux avoir le mode fullHeight classique par contre je veux le mode collapse tout le temps ensuite :
+```tsx
+<iris-app-layout
+  collapseEnd="never"
+/>
+```
+Pas besoin de toucher au `fullheightEnd`, on garde le comportement par défaut, par contre on précise le breakpoint de fin du mode collapse qui va être _never_.
+
+#### Breakpoints custom
+Je veux le mode Full Height jusqu'au breakpoint `xs` puis du collapse jusqu'au breakpoint `md` :
+```tsx
+<iris-app-layout
+  fullheightEnd="xs"
+  collapseEnd="md"
+/>
+```
+Le mode Full Height va s'arrêter au breakpoint xs puis on aura le mode collapse jusq'au breakpoint md en on enchainera sur le mode par défaut.

@@ -1,0 +1,24 @@
+::-webkit-scrollbar-track {
+  opacity: 0;
+}
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: .5rem;
+  background-clip: padding-box;
+  background-color: var(--dsmu-c-color-scroll-default);
+  border: .25rem solid rgba(0, 0, 0, 0);
+
+  &:hover {
+    background-color: var(--dsmu-c-color-scroll-hover);
+  }
+
+  &:active {
+    background-color: var(--dsmu-c-color-scroll-press);
+  }
+}
+::-webkit-scrollbar-button {
+  height: 2px;
+}

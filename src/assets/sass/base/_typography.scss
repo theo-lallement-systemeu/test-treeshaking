@@ -1,0 +1,125 @@
+:root {
+  /* Size */
+  --dsmu-typo-size-body: 1rem;
+  --dsmu-typo-size-body-small: 0.875rem;
+  --dsmu-typo-size-body-extra-small: 0.75rem;
+  --dsmu-typo-size-header1: 2rem;
+  --dsmu-typo-size-header2: 1.5rem;
+  --dsmu-typo-size-header3: 1.25rem;
+  --dsmu-typo-size-header4: 1.125rem;
+  /* Weight */
+  --dsmu-typo-weight-regular: 400;
+  --dsmu-typo-weight-semibold: 600;
+  --dsmu-typo-weight-bold: 700;
+  /* Color */
+  --dsmu-typo-color-primary: var(--dsmu-c-primary-700);
+  --dsmu-typo-color-error: var(--dsmu-c-red-800);
+  --dsmu-typo-color-success: var(--dsmu-c-green-700);
+  --dsmu-typo-color-warning: var(--dsmu-c-yellow-800);
+  --dsmu-typo-color-turquoise: var(--dsmu-c-turquoise-700);
+  --dsmu-typo-color-orange: var(--dsmu-c-orange-700);
+}
+
+// DEFAULT VALUE
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--dsmu-font-family-title);
+  font-weight: var(--dsmu-typo-weight-semibold);
+  color: var(--dsmu-text-heigh-emphasis);
+}
+
+h1 {
+  font-size: var(--dsmu-typo-size-header1);
+}
+
+h2 {
+  font-size: var(--dsmu-typo-size-header2);
+}
+
+h3 {
+  font-size: var(--dsmu-typo-size-header3);
+}
+
+h4 {
+  font-size: var(--dsmu-typo-size-header4);
+}
+
+p {
+  font-family: var(--dsmu-font-family-global);
+  font-weight: var(--dsmu-typo-weight-regular);
+  font-size: var(--dsmu-typo-size-body);
+  color: var(--dsmu-text-medium-emphasis);
+}
+
+// UTILITIES
+
+// Weights
+.dsmu-text-weight{
+
+    &-regular {
+      font-weight: var(--dsmu-typo-weight-regular);
+    }
+
+    &-semibold {
+      font-weight: var(--dsmu-typo-weight-semibold);
+    }
+
+    &-bold {
+      font-weight: var(--dsmu-typo-weight-bold);
+    }
+}
+
+// Sizes
+
+.dsmu-text-size {
+
+  &-body {
+    font-size: var(--dsmu-typo-size-body);
+  }
+
+  &-body-small {
+    font-size: var(--dsmu-typo-size-body-small);
+  }
+
+  &-body-extra-small {
+    font-size: var(--dsmu-typo-size-body-extra-small);
+  }
+}
+
+// Colors
+.dsmu-text-color {
+
+  &-high-emphasis {
+    color: var(--dsmu-text-high-emphasis)
+  }
+  &-medium-emphasis {
+    color: var(--dsmu-text-medium-emphasis)
+  }
+  &-disabled {
+    color: var(--dsmu-text-disabled)
+  }
+  &-on-dark {
+    color: var(--dsmu-text-on-dark)
+  }
+  &-action {
+    color: var(--dsmu-text-action)
+  }
+  &-error {
+    color: var(--dsmu-text-error)
+  }
+  &-success {
+    color: var(--dsmu-text-success)
+  }
+  &-warning {
+    color: var(--dsmu-text-warning)
+  }
+  &-information {
+    color: var(--dsmu-text-information)
+  }
+  &-turquoise {
+    color: var(--dsmu-text-turquoise)
+  }
+  &-orange {
+    color: var(--dsmu-text-orange)
+  }
+}

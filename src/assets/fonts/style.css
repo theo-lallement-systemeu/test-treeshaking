@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'PDF_Font';
+  src:
+    url('fonts/PDF_Font.ttf?mjya9f') format('truetype'),
+    url('fonts/PDF_Font.woff?mjya9f') format('woff'),
+    url('fonts/PDF_Font.svg?mjya9f#PDF_Font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.iris-pdf--icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'PDF_Font' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iris-pdf-ToggleSidebar:before {
+  content: "\e900";
+}
+.iris-pdf-Find:before {
+  content: "\e901";
+}
+.iris-pdf-PreviousPage:before {
+  content: "\e902";
+}
+.iris-pdf-NextPage:before {
+  content: "\e903";
+}
+.iris-pdf-ZoomOut:before {
+  content: "\e904";
+}
+.iris-pdf-ZoomIn:before {
+  content: "\e905";
+}
+.iris-pdf-FullScreen:before {
+  content: "\e906";
+}
+.iris-pdf-Download:before {
+  content: "\e907";
+}
+.iris-pdf-Print:before {
+  content: "\e908";
+}
+.iris-pdf-Copy:before {
+  content: "\e909";
+}
+.iris-pdf-Open:before {
+  content: "\e90a";
+}
+.iris-pdf-Tools:before {
+  content: "\e90b";
+}
+.iris-pdf-PreviousOccurrence:before {
+  content: "\e90c";
+}
+.iris-pdf-NextOccurrence:before {
+  content: "\e90d";
+}
+.iris-pdf-FirstPage:before {
+  content: "\e90e";
+}
+.iris-pdf-LastPage:before {
+  content: "\e90f";
+}
+.iris-pdf-RotateClockwise:before {
+  content: "\e910";
+}
+.iris-pdf-RotateCounterClockwise:before {
+  content: "\e911";
+}
+.iris-pdf-SelectionTool:before {
+  content: "\e912";
+}
+.iris-pdf-HandTool:before {
+  content: "\e913";
+}
+.iris-pdf-VerticalScrolling:before {
+  content: "\e914";
+}
+.iris-pdf-HorizontalScrolling:before {
+  content: "\e915";
+}
+.iris-pdf-BlocScrolling:before {
+  content: "\e916";
+}
+.iris-pdf-NoSpreads:before {
+  content: "\e917";
+}
+.iris-pdf-OddSpreads:before {
+  content: "\e918";
+}
+.iris-pdf-EvenSpreads:before {
+  content: "\e919";
+}
+.iris-pdf-Infos:before {
+  content: "\e91a";
+}
+.iris-pdf-CheckCircle:before {
+  content: "\e91b";
+}
+.iris-pdf-XCircle:before {
+  content: "\e91c";
+}
+.iris-pdf-MagnifyingGlass:before {
+  content: "\e91d";
+}
+.iris-pdf-PageView:before {
+  content: "\e91e";
+}
+.iris-pdf-ListView:before {
+  content: "\e91f";
+}
+.iris-pdf-AttachView:before {
+  content: "\e920";
+}
+.iris-pdf-CaretRightFill:before {
+  content: "\e921";
+}
+.iris-pdf-CaretDownFill:before {
+  content: "\e922";
+}

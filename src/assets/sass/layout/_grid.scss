@@ -1,0 +1,82 @@
+@use '@/assets/sass/abstracts/_breakpoints.scss' as *;
+@use '@/assets/sass/abstracts/_functions.scss' as *;
+
+@mixin gutter($gutter) {
+  --dsmu-gutter-x: #{$gutter};
+  --dsmu-gutter-y: #{$gutter};
+}
+
+@mixin make-row($gutter: 1.5rem) {
+  @include gutter($gutter);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin make-col-ready() {
+  flex-shrink: 0;
+  width: calc(100% - var(--dsmu-gutter-x));
+  // TODO revoir si le calcul de max width est nécessaire ou si 100% est ok
+  max-width: calc(100% - var(--dsmu-gutter-x)); // Prevent `.em-col-auto`, `.em-col` (& responsive variants) from breaking out the grid
+  padding-right: calc(var(--dsmu-gutter-x) * 0.5);
+  padding-left: calc(var(--dsmu-gutter-x) * 0.5);
+  margin-top: var(--dsmu-gutter-y);
+
+  &.el-col-24 {
+    // max width does not include padding so it breaks when col must take the full width 
+    max-width: 100%
+  }
+}
+
+@mixin make-col($size: false, $columns: 24) {
+  @if $size {
+    flex: 0 0 auto;
+    width: percentage(divide($size, $columns));
+
+  } @else {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+}
+
+@mixin make-col-auto() {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@mixin make-col-offset($size, $columns: 24) {
+  $num: divide($size, $columns);
+  padding-left: if($num == 0, 0, percentage($num));
+}
+
+@mixin make-grid-columns($columns: 24, $gutter: 1.5rem, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      // Provide basic `.el-col-{bp}` classes for equal-width flexbox columns
+      .el-col#{$infix} {
+        flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+      }
+
+      .el-col#{$infix}-auto {
+        @include make-col-auto();
+      }
+
+      @if $columns > 0 {
+        @for $i from 1 through $columns {
+          .el-col#{$infix}-#{$i} {
+            @include make-col($i, $columns);
+          }
+        }
+
+        @for $i from 0 through ($columns - 1) {
+          @if not ($infix == "" and $i == 0) {
+            .el-offset#{$infix}-#{$i} {
+              @include make-col-offset($i, $columns);
+            }
+          }
+        }
+      }
+    }
+  }
+}

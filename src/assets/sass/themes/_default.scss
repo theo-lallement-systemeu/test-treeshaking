@@ -1,0 +1,78 @@
+@use "@fontsource/open-sans/400.css" as *;
+@use "@fontsource/open-sans/600.css" as *;
+@use "@fontsource/roboto-mono/400.css" as *;
+@use "@fontsource/roboto-slab/700.css" as *;
+@font-face {
+  font-family: 'PDF_Font';
+  src:
+    url('@/assets/fonts/PDF_Font.ttf?mjya9f') format('truetype'),
+    url('@/assets/fonts/PDF_Font.woff?mjya9f') format('woff'),
+    url('@/assets/fonts/PDF_Font.svg?mjya9f#PDF_Font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  /* === TYPOGRAPHY === */
+  --dsmu-font-family-global: 'Open Sans';
+  --dsmu-font-family-title: 'Roboto Slab';
+  --dsmu-font-family-pdf-icons: 'pdf';
+  --dsmu-font-family-monospace: 'Roboto Mono';
+
+  /* === COLORS === */
+  /* Background */
+  --dsmu-c-background-lightprimary: var(--dsmu-c-primary-50);
+  --dsmu-c-background-primary: var(--dsmu-c-primary);
+  --dsmu-c-background-primary-disabled: var(--dsmu-c-primary-disabled);
+  --dsmu-c-background-dark: var(--dsmu-c-grey-900);
+  --dsmu-c-background-base: var(--dsmu-c-grey-25);
+  --dsmu-c-background-page: var(--dsmu-c-grey-50);
+  --dsmu-c-background-light-disabled: var(--dsmu-c-grey-50);
+  --dsmu-c-background-lighterror: var(--dsmu-c-red-100);
+  --dsmu-c-background-lightsuccess: var(--dsmu-c-green-100);
+  --dsmu-c-background-lightwarning: var(--dsmu-c-yellow-100);
+  --dsmu-c-background-lightinformation: var(--dsmu-c-blue-50);
+  --dsmu-c-background-lightturquoise: var(--dsmu-c-turquoise-100);
+  --dsmu-c-background-lightorange: var(--dsmu-c-orange-100);
+  --dsmu-c-background-lightdisabled: var(--dsmu-c-grey-50);
+  --dsmu-c-background-page: var(--dsmu-c-grey-25);
+  /* Border */
+  --dsmu-c-border-decoration: var(--dsmu-c-grey-300);
+  --dsmu-c-border-error: var(--dsmu-c-red);
+  --dsmu-c-border-interactive: var(--dsmu-c-grey-700);
+  --dsmu-c-border-interactive-subtle: var(--dsmu-c-grey-500);
+  --dsmu-c-border-primary: var(--dsmu-c-primary);
+  --dsmu-c-border-separation: var(--dsmu-c-grey-300);
+  --dsmu-c-border-separation-subtle: var(--dsmu-c-grey-100);
+  --dsmu-c-border-lightprimary: var(--dsmu-c-primary-300);
+  --dsmu-c-border-lightinformation: var(--dsmu-c-blue-300);
+  --dsmu-c-border-lighterror: var(--dsmu-c-red-300);
+  --dsmu-c-border-lightsuccess: var(--dsmu-c-green-300);
+  --dsmu-c-border-lightwarning: var(--dsmu-c-yellow-300);
+  --dsmu-c-border-lightturquoise: var(--dsmu-c-turquoise-300);
+  --dsmu-c-border-lightorange: var(--dsmu-c-orange-300);
+  /* Text */
+  --dsmu-text-high-emphasis: var(--dsmu-c-grey-900);
+  --dsmu-text-medium-emphasis: var(--dsmu-c-grey-700);
+  --dsmu-text-disabled: var(--dsmu-c-grey-600);
+  --dsmu-text-on-dark: var(--dsmu-c-white);
+  --dsmu-text-action: var(--dsmu-c-primary-700);
+  --dsmu-text-error: var(--dsmu-c-red-800);
+  --dsmu-text-error-icon: var(--dsmu-c-red-700);
+  --dsmu-text-success: var(--dsmu-c-green-700);
+  --dsmu-text-success-icon: var(--dsmu-c-green-600);
+  --dsmu-text-warning: var(--dsmu-c-yellow-800);
+  --dsmu-text-warning-icon: var(--dsmu-c-yellow-700);
+  --dsmu-text-information: var(--dsmu-c-blue-600);
+  --dsmu-text-information-icon: var(--dsmu-c-blue-500);
+  --dsmu-text-turquoise: var(--dsmu-c-turquoise-700);
+  --dsmu-text-orange: var(--dsmu-c-orange-700);
+  /* Layer */
+  --dsmu-c-layer-onwhite-hover: hsla(var(--dsmu-c-primary-600-hsl), 0.1);
+  --dsmu-c-layer-onwhite-press: hsla(var(--dsmu-c-primary-600-hsl), 0.2);
+  /* Scroll */
+  --dsmu-c-color-scroll-default: hsla(var(--dsmu-c-grey-600-hsl), .4);
+  --dsmu-c-color-scroll-hover: hsla(var(--dsmu-c-grey-600-hsl), .8);
+  --dsmu-c-color-scroll-press: hsla(var(--dsmu-c-grey-600-hsl), 1);
+}

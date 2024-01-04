@@ -1,0 +1,119 @@
+:root {
+  /* Color: primary */
+  --dsmu-c-primary: var(--dsmu-c-primary-600);
+  --dsmu-c-primary-50: hsl(187, 60%, 92%);
+  --dsmu-c-primary-100: hsl(188, 59%, 85%);
+  --dsmu-c-primary-200: hsl(188, 50%, 72%);
+  --dsmu-c-primary-300: hsl(188, 46%, 61%);
+  --dsmu-c-primary-400: hsl(188, 44%, 49%);
+  --dsmu-c-primary-500: hsl(188, 65%, 38%);
+  --dsmu-c-primary-600-hsl: 188, 100%, 28%;
+  --dsmu-c-primary-600: hsl(var(--dsmu-c-primary-600-hsl));
+  --dsmu-c-primary-700: hsl(188, 98%, 23%);
+  --dsmu-c-primary-800: hsl(188, 98%, 17%);
+  --dsmu-c-primary-900: hsl(188, 100%, 11%);
+  --dsmu-c-primary-1000: hsl(187, 100%, 5%);
+  --dsmu-c-primary-disabled: hsl(188, 10%, 42%);
+  /* Color: turquoise */
+  --dsmu-c-turquoise: var(--dsmu-c-turquoise-400);
+  --dsmu-c-turquoise-50: hsl(173, 57%, 95%);
+  --dsmu-c-turquoise-100: hsl(174, 56%, 89%);
+  --dsmu-c-turquoise-200: hsl(174, 46%, 79%);
+  --dsmu-c-turquoise-300: hsl(174, 41%, 69%);
+  --dsmu-c-turquoise-400: hsl(174, 40%, 58%);
+  --dsmu-c-turquoise-500: hsl(174, 32%, 48%);
+  --dsmu-c-turquoise-600-hsl: 174, 39%, 38%;
+  --dsmu-c-turquoise-600: hsl(var(--dsmu-c-primary-600-hsl));
+  --dsmu-c-turquoise-700: hsl(174, 49%, 28%);
+  --dsmu-c-turquoise-800: hsl(173, 64%, 19%);
+  --dsmu-c-turquoise-900: hsl(174, 80%, 12%);
+  --dsmu-c-turquoise-1000: hsl(175, 100%, 5%);
+  /* Color: blue */
+  --dsmu-c-blue: var(--dsmu-c-blue-300);
+  --dsmu-c-blue-50: hsl(195, 94%, 87%);
+  --dsmu-c-blue-100: hsl(195, 76%, 75%);
+  --dsmu-c-blue-200: hsl(195, 76%, 75%);
+  --dsmu-c-blue-300: hsl(195, 70%, 64%);
+  --dsmu-c-blue-400: hsl(194, 50%, 56%);
+  --dsmu-c-blue-500: hsl(195, 41%, 47%);
+  --dsmu-c-blue-600: hsl(195, 47%, 38%);
+  --dsmu-c-blue-700: hsl(195, 47%, 38%);
+  --dsmu-c-blue-800: hsl(194, 68%, 19%);
+  --dsmu-c-blue-900: hsl(194, 68%, 19%);
+  --dsmu-c-blue-1000: hsl(194, 100%, 5%);
+  /* Color: red */
+  --dsmu-c-red: var(--dsmu-c-red-700);
+  --dsmu-c-red-50: hsl(6, 100%, 98%);
+  --dsmu-c-red-100: hsl(3, 100%, 96%);
+  --dsmu-c-red-200: hsl(3, 100%, 91%);
+  --dsmu-c-red-300: hsl(2, 92%, 85%);
+  --dsmu-c-red-400: hsl(2, 83%, 77%);
+  --dsmu-c-red-500: hsl(2, 80%, 69%);
+  --dsmu-c-red-600-hsl: 2, 78%, 59%;
+  --dsmu-c-red-600: hsl(var(--dsmu-c-red-600-hsl));
+  --dsmu-c-red-700: hsl(2, 80%, 49%);
+  --dsmu-c-red-800: hsl(2, 87%, 33%);
+  --dsmu-c-red-900: hsl(2, 94%, 19%);
+  --dsmu-c-red-1000: hsl(2, 100%, 5%);
+  /* Color: green */
+  --dsmu-c-green: var(--dsmu-c-green-500);
+  --dsmu-c-green-50: hsl(135, 67%, 96%);
+  --dsmu-c-green-100: hsl(136, 62%, 93%);
+  --dsmu-c-green-200: hsl(136, 46%, 84%);
+  --dsmu-c-green-300: hsl(135, 43%, 75%);
+  --dsmu-c-green-400: hsl(135, 41%, 66%);
+  --dsmu-c-green-500: hsl(135, 41%, 56%);
+  --dsmu-c-green-600-hsl: 135, 38%, 44%;
+  --dsmu-c-green-600: hsl(var(--dsmu-c-green-600-hsl));
+  --dsmu-c-green-700: hsl(135, 49%, 33%);
+  --dsmu-c-green-800: hsl(135, 63%, 22%);
+  --dsmu-c-green-900: hsl(135, 81%, 13%);
+  --dsmu-c-green-1000: hsl(134, 100%, 5%);
+  /* Color: yellow */
+  --dsmu-c-yellow: var(--dsmu-c-yellow-500);
+  --dsmu-c-yellow-50: hsl(60, 100%, 95%);
+  --dsmu-c-yellow-100: hsl(60, 100%, 89%);
+  --dsmu-c-yellow-200: hsl(52, 100%, 80%);
+  --dsmu-c-yellow-300: hsl(49, 100%, 71%);
+  --dsmu-c-yellow-400: hsl(48, 100%, 61%);
+  --dsmu-c-yellow-500: hsl(47, 100%, 50%);
+  --dsmu-c-yellow-600-hsl: 47, 94%, 42%;
+  --dsmu-c-yellow-600: hsl(var(--dsmu-c-yellow-600-hsl));
+  --dsmu-c-yellow-700: hsl(47, 93%, 33%);
+  --dsmu-c-yellow-800: hsl(47, 95%, 24%);
+  --dsmu-c-yellow-900: hsl(47, 100%, 14%);
+  --dsmu-c-yellow-1000: hsl(48, 100%, 5%);
+  /* Color: orange */
+  --dsmu-c-orange: var(--dsmu-c-orange-600);
+  --dsmu-c-orange-50: hsl(30, 100%, 97%);
+  --dsmu-c-orange-100: hsl(29, 100%, 94%);
+  --dsmu-c-orange-200: hsl(23, 100%, 87%);
+  --dsmu-c-orange-300: hsl(21, 100%, 80%);
+  --dsmu-c-orange-400: hsl(21, 96%, 72%);
+  --dsmu-c-orange-500: hsl(21, 92%, 63%);
+  --dsmu-c-orange-600-hsl: 21, 92%, 63%;
+  --dsmu-c-orange-600: hsl(var(--dsmu-c-orange-600-hsl));
+  --dsmu-c-orange-700: hsl(21, 83%, 40%);
+  --dsmu-c-orange-800: hsl(21, 89%, 28%);
+  --dsmu-c-orange-900: hsl(21, 95%, 16%);
+  --dsmu-c-orange-1000: hsl(22, 100%, 5%);
+  /* Color: grey */
+  --dsmu-c-grey-25: hsl(0, 0%, 98%);
+  --dsmu-c-grey-50: hsl(210, 8%, 95%);
+  --dsmu-c-grey-100: hsl(180, 4%, 91%);
+  --dsmu-c-grey-200: hsl(192, 5%, 81%);
+  --dsmu-c-grey-300: hsl(187, 6%, 71%);
+  --dsmu-c-grey-400: hsl(189, 7%, 61%);
+  --dsmu-c-grey-500: hsl(187, 7%, 51%);
+  --dsmu-c-grey-600: hsl(var(--dsmu-c-grey-600-hsl));
+  --dsmu-c-grey-600-hsl: 188, 10%, 42%;
+  --dsmu-c-grey-700: hsl(var(--dsmu-c-grey-700-hsl));
+  --dsmu-c-grey-700-hsl: 188, 15%, 32%;
+  --dsmu-c-grey-800: hsl(188, 20%, 23%);
+  --dsmu-c-grey-900: hsl(var(--dsmu-c-grey-900-hsl));
+  --dsmu-c-grey-900-hsl: 186, 26%, 15%;
+  --dsmu-c-grey-1000: hsl(185, 32%, 7%);
+  /* Color: white */
+  --dsmu-c-white-hsl: 0, 0%, 100%;
+  --dsmu-c-white: hsl(var(--dsmu-c-white-hsl));
+}
